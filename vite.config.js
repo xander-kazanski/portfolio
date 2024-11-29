@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 
 export default defineConfig(() => ({
   build: {
     rollupOptions: {
       input: [
-        resolve(__dirname, 'index.html'),
+        'index.html',
+        'portfolio-item-oldagram.html',
+        'portfolio-item-tenzies.html',
+        'portfolio-item-password-generator.html',
+        'portfolio-item-meme-generator.html',
+        'portfolio-item-quiz-app.html',
+        'under-development.html',
+        './js/index.js'
       ],
     },
   },
