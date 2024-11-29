@@ -14,7 +14,7 @@ export default defineConfig({
         "quiz-app": resolve(__dirname, 'portfolio-item-quiz-app.html'),
         "personal-dashboard": resolve(__dirname, 'under-development.html'),
         css: resolve(__dirname, './css/style.css'),
-        js: resolve(__dirname, './js/index.js')
+        'index.js': resolve(__dirname, './js/index.js')
 
         // Add more as needed
       },
