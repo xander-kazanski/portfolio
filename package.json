@@ -10,5 +10,6 @@
   "dependencies": {
     "vite": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
