@@ -219,3 +219,6 @@ dist/assets/password-generator-alTkY1fO.jpg
 dist/assets/quiz-5fY-TEUh.png
 dist/assets/services-bg7-S9X8fiXV.jpg
 dist/assets/tenzies-E4o_bSlW.jpg
+
+# Local Netlify folder
+.netlify
