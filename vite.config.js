@@ -10,7 +10,8 @@ export default defineConfig(() => ({
         'portfolio-item-password-generator.html',
         'portfolio-item-meme-generator.html',
         'portfolio-item-quiz-app.html',
-        'portfolio-item-chef-claude.html.html',
+        'portfolio-item-chef-claude.html',
+        'portfolio-item-assembly-endgame.html',
         './js/index.js'
       ],
     },
