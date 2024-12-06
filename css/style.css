@@ -412,8 +412,9 @@ header {
 .portfolio__item {
     background: var(--color-accent);
     overflow: hidden;
-
 }
+
+
 
 .portfolio__img {
     transition: 
