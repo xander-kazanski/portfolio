@@ -12,6 +12,7 @@ export default defineConfig(() => ({
         'portfolio-item-quiz-app.html',
         'portfolio-item-chef-claude.html',
         'portfolio-item-assembly-endgame.html',
+        'portfolio-item-gift-chain.html',
         './js/index.js'
       ],
     },
