@@ -12,16 +12,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-
-  <!-- Update these with your own fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
-
-  <!-- Ubuntu Sans-->
+  <!-- Space and Typography themed fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -35,119 +31,70 @@
     </div>
     <button class="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger"></span>
-    </button>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#services" class="nav__link">What Services</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-        <li class="nav__item"><a href="#work" class="nav__link">What Projects</a></li>
+    </button>    <nav class="nav">      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link" title="Home">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link" title="About">About</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link" title="Projects">Projects</a></li>
       </ul>
     </nav>
   </header>
-
-  <!-- Introduction -->
-  <section class="intro" id="home">
-    <h1 class="section__title section__title--intro">
-      Hi, I am <strong>Alex Kazanski</strong>
+  <!-- Introduction -->  <section class="intro" id="home"><h1 class="section__title section__title--intro">Hi, welcome to my portfolio
     </h1>
-    <p class="section__subtitle section__subtitle--intro">Front-End Engineer</p>
-    <img src="img/dev-alex-01.png"
+    <p class="section__subtitle section__subtitle--intro">Frontend Javascript Software Engineer</p>
+    <img src="img/dev-alex-01.jpg"
       alt="a picture of Bitmoji Alex Kazanski smiling" class="intro__img">
   </section>
 
-
-  <!-- What services -->
-  <section class="my-services" id="services">
-    <h2 class="section__title section__title--services">What I do</h2>
-    <div class="services">
-      <div class="service">
-        <h3>UX</h3>
-        <p>I craft web applications that are both visually striking and effortless to navigate. My work emphasizes
-          creating interfaces that captivate users while making their experience smooth and intuitive.</p>
-      </div> <!-- / service -->
-
-
-      <div class="service">
-        <h3>Engineering</h3>
-        <p>As a frontend developer, I excel in building modern, efficient solutions using React JS and Tailwind CSS. My
-          knowledge of HTML, CSS, and JavaScript ensures every project is built with precision and reliability.</p>
-      </div> <!-- / service -->
-
-      <!-- Add more services if you want -->
-
-    </div> <!-- / services -->
-
-    <a href="#work" class="btn">What Projects</a>
-  </section>
-
-
-  <!-- About me -->
+  <!-- My Background -->
   <section class="about-me" id="about">
-    <h2 class="section__title section__title--about">What I am</h2>
-    <p class="section__subtitle section__subtitle--about">Front-End Engineer with a Love for Exploration and
-      Understanding</p>
-
     <div class="about-me__body">
-      <p>I’m a Tampa-based developer who creates applications that address practical needs with creativity and ease of
-        use. My technical toolkit features TypeScript, React JS, Tailwind CSS, and Styled Components, enabling me to
-        deliver polished, efficient solutions..</p>
-      <p>I honed my skills through the Scrimba Frontend Developer Career Path, where I cultivated a strong foundation in
-        building modern web interfaces. Outside of coding, I’m drawn to studying animal behavior and how intelligence
-        emerges from natural processes. My hobbies include scaling cliffs 🧗 and practicing marksmanship 🔫.</p>
+      <p>Based in Tampa, I specialize in creating modern web applications using TypeScript, React, and Tailwind CSS. 
+         My focus is on delivering clean, efficient, and user-friendly solutions that solve real-world problems.</p>
     </div>
-
-    <img src="img/dev-alex-02.png"
-      alt="Alex Bitmoji smiling at a desk that has a stack of papers and he is on the phone." class="about-me__img">
   </section>
 
   <!-- My Work -->
-  <section class="my-work" id="work">
-    <h2 class="section__title section__title--work">What projects</h2>
-    <p class="section__subtitle section__subtitle--work">A selection of what work I have done</p>
+  <section class="my-work" id="work">    <h2 class="section__title section__title--work">Constellations of Creation</h2>
+    <p class="section__subtitle section__subtitle--work">A Cartography of Digital Endeavors</p>
 
-    <div class="portfolio">
-      <!-- Portfolio item 01 -->
-      <a href="portfolio-item-oldagram.html" class="portfolio__item">
-        <img src="img/oldagram-square.png" alt="" class="portfolio__img">
+    <div class="portfolio">      <!-- Portfolio item 01 -->
+      <a href="portfolio-item-oldagram.html" class="portfolio__item" title="Oldagram Project">
+        <img src="img/oldagram-square.png" alt="Oldagram Project Screenshot" class="portfolio__img">
       </a>
 
       <!-- Portfolio item 02 -->
-      <a href="portfolio-item-tenzies.html" class="portfolio__item">
-        <img src="img/tenzies.jpg" alt="" class="portfolio__img">
+      <a href="portfolio-item-tenzies.html" class="portfolio__item" title="Tenzies Game">
+        <img src="img/tenzies.jpg" alt="Tenzies Game Screenshot" class="portfolio__img">
       </a>
-
 
       <!-- Portfolio item 03 -->
-      <a href="portfolio-item-password-generator.html" class="portfolio__item">
-        <img src="img/password-generator.jpg" alt="" class="portfolio__img">
+      <a href="portfolio-item-password-generator.html" class="portfolio__item" title="Password Generator">
+        <img src="img/password-generator.jpg" alt="Password Generator Screenshot" class="portfolio__img">
       </a>
-
-      <!-- Portfolio item 04 -->
 
       <!-- Portfolio item 05 -->
-      <a href="portfolio-item-meme-generator.html" class="portfolio__item">
-        <img src="img/meme-generator.jpg" alt="" class="portfolio__img">
+      <a href="portfolio-item-meme-generator.html" class="portfolio__item" title="Meme Generator">
+        <img src="img/meme-generator.jpg" alt="Meme Generator Screenshot" class="portfolio__img">
       </a>
 
       <!-- Portfolio item 06 -->
-      <a href="portfolio-item-quiz-app.html" class="portfolio__item">
-        <img src="img/quiz.png" alt="" class="portfolio__img">
+      <a href="portfolio-item-quiz-app.html" class="portfolio__item" title="Quiz App">
+        <img src="img/quiz.png" alt="Quiz App Screenshot" class="portfolio__img">
       </a>
 
-      <!-- Portfolio item 06 -->
-      <a href="portfolio-item-chef-claude.html" class="portfolio__item">
-        <img src="img/chef-claude.png" alt="" class="portfolio__img">
+      <!-- Portfolio item 07 -->
+      <a href="portfolio-item-chef-claude.html" class="portfolio__item" title="Chef Claude AI">
+        <img src="img/chef-claude.png" alt="Chef Claude AI Screenshot" class="portfolio__img">
       </a>
 
-      <!-- Portfolio item 07 capstone -->
-      <a href="portfolio-item-assembly-endgame.html" class="portfolio__item capstone-anchor">
-        <img src="img/assembly-endgame.png" alt="" class="portfolio__img">
+      <!-- Portfolio item 08 -->
+      <a href="portfolio-item-assembly-endgame.html" class="portfolio__item capstone-anchor" title="Assembly Endgame">
+        <img src="img/assembly-endgame.png" alt="Assembly Endgame Screenshot" class="portfolio__img">
       </a>
 
-      <!-- Portfolio item 07 capstone -->
-      <a href="portfolio-item-gift-chain.html" class="portfolio__item">
-        <img src="img/giftchain.png" alt="" class="portfolio__img">
+      <!-- Portfolio item 09 -->
+      <a href="portfolio-item-gift-chain.html" class="portfolio__item" title="Gift Chain">
+        <img src="img/giftchain.png" alt="Gift Chain Screenshot" class="portfolio__img">
       </a>
 
 
@@ -155,29 +102,27 @@
   </section>
 
 
-  <!-- Footer -->
-  <footer class="footer">
-    <!-- replace with your own email address -->
-    <a href="mailto:alexander.kazanski1@outlook.com" class="footer__link">alexander.kazanski1@outlook.com</a>
+  <!-- Footer -->  <footer class="footer">
+    <a href="mailto:alexander.kazanski1@outlook.com" class="footer__link" title="Send me an email">
+      <i class="fas fa-rocket"></i> alexander.kazanski1@outlook.com
+    </a>
     <ul class="social-list">
       <li class="social-list__item">
-        <a class="social-list__link" href="https://medium.com/@alexander.kazanski1@outlook.com">
-          <i class="fab fa-medium"></i>
-        </a>
-      </li>
-      <!-- <li class="social-list__item">
-                    <a class="social-list__link" href="http://dribbble.com">
-                        <i class="fab fa-dribbble"></i>
-                    </a>
-                </li> -->
-      <li class="social-list__item">
-        <a class="social-list__link" href="https://x.com/alexkazanski">
-          <i class="fab fa-twitter"></i>
+        <a class="social-list__link" href="https://medium.com/@alexander.kazanski1@outlook.com" title="Read my articles on Medium">
+          <i class="fab fa-medium" aria-hidden="true"></i>
+          <span class="sr-only">Medium Blog</span>
         </a>
       </li>
       <li class="social-list__item">
-        <a class="social-list__link" href="https://github.com/alexanderkazanski">
-          <i class="fab fa-github"></i>
+        <a class="social-list__link" href="https://x.com/alexkazanski" title="Follow me on X">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+          <span class="sr-only">X (formerly Twitter)</span>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="https://github.com/alexanderkazanski" title="Check out my GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="sr-only">GitHub Profile</span>
         </a>
       </li>
     </ul>

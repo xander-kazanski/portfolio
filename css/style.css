@@ -7,23 +7,27 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Lora', serif;
-    --ff-secondary: 'Roboto Slab', serif;
+    --ff-primary: 'Space Mono', monospace;
+    --ff-secondary: 'Nova Square', sans-serif;
     
     --fw-reg: 400;
     --fw-bold: 700;
     
-    --color-light: #fff;
-    --color-dark: #303030;
-    --color-accent: #3F83F8;
+    --color-light: #E8F1FF;
+    --color-dark: #0B1026;
+    --color-accent: #7B2FBA;
+    --color-nebula: #FF61D8;
+    --color-stars: #FFFFFF;
     
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.75rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --bg-space: linear-gradient(to bottom, #0B1026 0%, #1B2735 50%, #090A0F 100%);
+    
+    --bs: 0 0 1em rgba(123, 47, 186, 0.2),
+          0 0 2em rgba(255, 97, 216, 0.1);
 }
 
 @media (min-width: 800px) {
@@ -44,8 +48,8 @@
 
 
 body {
-    background: var(--color-light);
-    color: var(--color-dark);
+    background: var(--bg-space);
+    color: var(--color-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -53,7 +57,7 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 1em;
 }
 
 img {
@@ -72,7 +76,7 @@ strong { font-weight: var(--fw-bold) }
 
 .btn {
     display: inline-block;
-    padding: 1em 2.5em;
+    padding: 0.75em 2em;
     background: var(--color-accent);
     color: var(--color-light);
     text-decoration: none;
@@ -81,11 +85,14 @@ strong { font-weight: var(--fw-bold) }
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
-    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    box-shadow: 0 0 1em rgba(123, 47, 186, 0.4);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     transform: scale(1.1);
+    box-shadow: 0 0 2em var(--color-nebula);
 }
 
 /* Typography */
@@ -105,10 +112,14 @@ h3 { font-size: var(--fs-h3) }
 .section__title {
     margin-bottom: .25em;
     align-self: center;
+    color: var(--color-nebula);
+    text-shadow: 0 0 10px rgba(255, 97, 216, 0.5);
 }
 
 .section__title--intro {
-    font-weight: var(--fw-reg);
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+    margin-bottom: 0.25em;
 }
 
 .section__title--intro strong {
@@ -178,7 +189,7 @@ header {
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h3);
     text-decoration: none;
 }
 
@@ -217,11 +228,6 @@ header {
     opacity: 0;
 }
 
-
-
-
-
-
 .hamburger {
     display: block;
     position: relative;
@@ -236,7 +242,6 @@ header {
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after {
@@ -254,6 +259,7 @@ header {
 
 .intro {
     position: relative;
+    padding: 4em 2em;
 }
 
 .intro__img {
@@ -293,6 +299,81 @@ header {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
+    }
+}
+
+/* Base intro styles */
+.intro {
+    position: relative;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.section__title--intro {
+    font-size: calc(var(--fs-h1) * 0.6);
+    line-height: 1.2;
+    margin-bottom: 0.25em;
+}
+
+.section__subtitle--intro {
+    margin-bottom: 1em;
+    font-size: calc(var(--fs-h3) * 0.9);
+}
+
+.intro__img {
+    max-width: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min(90%, 1000px);
+        margin: 0 auto;
+        grid-template-columns: minmax(auto, 500px) auto;
+        grid-template-areas: 
+            "title img"
+            "subtitle img";
+        gap: 1em;
+        text-align: left;
+        padding: 3em 1em;
+    }
+
+    .section__title--intro {
+        grid-area: title;
+        font-size: calc(var(--fs-h1) * 0.7);
+        align-self: end;
+    }
+
+    .section__subtitle--intro {
+        grid-area: subtitle;
+        font-size: var(--fs-h3);
+        align-self: start;
+    }
+
+    .intro__img {
+        grid-area: img;
+        max-width: 200px;
+        margin: 0;
+        justify-self: end;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1000px) {
+    .intro {
+        padding: 4em 2em;
+        grid-template-columns: minmax(auto, 800px) auto;
+    }
+
+    .section__title--intro {
+        font-size: var(--fs-h1);
+    }
+
+    .intro__img {
+        max-width: 250px;
     }
 }
 
@@ -402,26 +483,28 @@ header {
 }
 
 .portfolio {
-    margin: 0 auto;
-    max-width: 1000px;
     display: grid;
-    grid-gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 .portfolio__item {
-    background: var(--color-accent);
+    background: var(--color-dark);
     overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--bs);
 }
 
 
 
 .portfolio__img {
-    transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-    object-fit: cover;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+                opacity 250ms linear;
 }
 
 .portfolio__item:focus {
@@ -510,9 +593,44 @@ header {
 .portfolio-item-individual a {
     margin-right: 0.8em;
     font-size: 1rem;
-    border: 1px solid var(--color-dark);
-    color: var(--color-dark);
-    padding: 0.25em 1em;
+    border: 1px solid var(--color-light);
+    background: transparent;
+    color: var(--color-light);
+    padding: 0.5em 1.25em;
     text-decoration: none;
+    transition: all 250ms ease-in-out;
+    border-radius: 4px;
+}
 
+.portfolio-item-individual a:hover {
+    background: var(--color-light);
+    color: var(--color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(232, 241, 255, 0.2);
+}
+
+/* Star animation */
+@keyframes twinkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.my-services::before,
+.about-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(var(--color-stars) 1px, transparent 1px),
+        radial-gradient(var(--color-stars) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.1;
+    animation: twinkle 4s infinite;
+    pointer-events: none;
+    z-index: -1;
 }
